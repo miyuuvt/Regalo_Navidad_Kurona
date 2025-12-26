@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Luces Navideño - Kuron</title>
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Modular Principal -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- NOTA: Ya NO necesitas tu style.css original -->
+</head>
+<body>
+    <!-- ... resto de tu HTML igual ... -->
+    <!-- Contenedor principal -->
+    <div id="scene-container">
+        <!-- Árbol de luces (se crea con JS) -->
+        <canvas id="lights-canvas"></canvas>
+        
+        <!-- Contenedor de fotos giratorias -->
+        <div id="photos-container"></div>
+        
+        <!-- Estrella especial -->
+        <div id="special-star">
+            <img src="img/estrella-especial.png" alt="Estrella Kuron" id="star-image">
+            <div class="star-glow"></div>
+        </div>
+    </div>
+
+    <!-- Interfaz -->
+    <div id="ui">
+        <!-- Título -->
+        <div class="title-container">
+            <h1 class="main-title">FELIZ NAVIDAD</h1>
+            <h2 class="subtitle">Comunidad Kurona</h2>
+        </div>
+
+        <!-- Instrucciones -->
+        <div class="instructions-panel">
+            <h3><i class="fas fa-star"></i> Instrucciones</h3>
+            <div class="instructions-content">
+                <p><i class="fas fa-mouse-pointer"></i> Click en cualquier imagen</p>
+                <p><i class="fas fa-expand"></i> Se abrirá como tarjeta navideña</p>
+                <p><i class="fas fa-times"></i> Click fuera para volver</p>
+                <p><i class="fas fa-eye"></i> Las imágenes giran automáticamente</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Overlay de tarjeta navideña -->
+    <div id="card-overlay" class="card-overlay">
+        <div class="card-content">
+            <div class="card-image-container">
+                <img id="card-image" src="" alt="Ilustración">
+                <div class="card-corner-decoration top-left"><i class="fas fa-star"></i></div>
+                <div class="card-corner-decoration top-right"><i class="fas fa-star"></i></div>
+                <div class="card-corner-decoration bottom-left"><i class="fas fa-star"></i></div>
+                <div class="card-corner-decoration bottom-right"><i class="fas fa-star"></i></div>
+            </div>
+            <div class="card-text-container">
+                <h3 id="card-title">Ilustración Navideña</h3>
+                <p id="card-artist">Artista de la comunidad</p>
+                <div class="card-message">
+                    <p id="card-message-text">¡Feliz Navidad y próspero Año Nuevo!</p>
+                </div>
+                <div class="card-footer">
+                    <div class="snowflake-decoration">❄</div>
+                    <p class="card-from">Con cariño, la comunidad Kuron</p>
+                    <div class="snowflake-decoration">❄</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/tree-lights.js"></script>
+    <script src="js/photos-manager.js"></script>
+</body>
+</html>
