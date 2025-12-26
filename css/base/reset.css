@@ -1,0 +1,76 @@
+/* ===== RESET MEJORADO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-body, sans-serif);
+    background-color: var(--color-bg, #0a0a0f);
+    color: var(--color-text, #ffffff);
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    user-select: none;
+}
+
+/* ===== UTILIDADES ===== */
+.pointer-events-auto {
+    pointer-events: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-gold {
+    color: var(--color-gold);
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* ===== ESTILOS PARA SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(26, 26, 46, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-light);
+}
+
+/* ===== ESTILOS PARA SELECTION ===== */
+::selection {
+    background: var(--color-gold);
+    color: var(--color-dark);
+}
+
+::-moz-selection {
+    background: var(--color-gold);
+    color: var(--color-dark);
+}

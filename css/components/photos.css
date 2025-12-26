@@ -1,0 +1,232 @@
+/* ===== FOTOS GIRATORIAS ===== */
+
+/* Contenedor de fotos */
+#photos-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+/* Marcos de fotos */
+.photo-frame {
+    position: absolute;
+    width: 170px;
+    height: 220px;
+    cursor: pointer;
+    transition: all var(--transition);
+    transform-origin: center;
+    z-index: 2;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+}
+
+.photo-frame::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(135deg, 
+        var(--color-gold),
+        var(--color-red),
+        var(--color-green),
+        var(--color-blue));
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--transition);
+    animation: frameGlow 3s linear infinite;
+    background-size: 400% 400%;
+}
+
+.photo-frame:hover {
+    transform: scale(1.15);
+    z-index: 100 !important;
+    filter: drop-shadow(0 10px 25px rgba(255, 215, 0, 0.5));
+}
+
+.photo-frame:hover::before {
+    opacity: 0.8;
+}
+
+/* Frame interior */
+.photo-frame .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(255, 215, 0, 0.15),
+        rgba(138, 43, 226, 0.25));
+    border-radius: 10px;
+    border: 2px solid var(--color-gold);
+    box-shadow: 
+        inset 0 0 15px rgba(255, 255, 255, 0.15),
+        0 8px 25px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.photo-frame .frame::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.photo-frame:hover .frame::after {
+    left: 100%;
+}
+
+/* Contenedor de la imagen */
+.photo-frame .photo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--color-dark);
+    transform: translateZ(0);
+}
+
+.photo-frame .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.photo-frame:hover .photo img {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+}
+
+/* Efecto de brillo */
+.photo-frame .shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.25) 50%,
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity var(--transition);
+    border-radius: 10px;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.photo-frame:hover .shine {
+    opacity: 1;
+}
+
+/* Fotos especiales */
+.special-photo {
+    /* Estilos específicos para fotos especiales */
+}
+
+.kuro-amy-photo {
+    animation: gentleFloat 5s ease-in-out infinite;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 100px !important;
+}
+
+/* Estrella especial */
+#special-star {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    z-index: 3;
+    pointer-events: none;
+    animation: 
+        starFloat 4s ease-in-out infinite,
+        starRotate 25s linear infinite,
+        starPulse 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px var(--color-gold));
+}
+
+#star-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-gold);
+    box-shadow: 
+        inset 0 0 30px rgba(255, 215, 0, 0.5),
+        0 0 40px var(--color-gold),
+        0 0 80px rgba(255, 215, 0, 0.5);
+    background: radial-gradient(circle at 30% 30%, 
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 215, 0, 0.8) 100%);
+    transition: all var(--transition-slow);
+}
+
+#special-star:hover #star-image {
+    transform: scale(1.1);
+    box-shadow: 
+        inset 0 0 40px rgba(255, 215, 0, 0.7),
+        0 0 60px var(--color-gold),
+        0 0 120px rgba(255, 215, 0, 0.7);
+}
+
+/* Glow de la estrella */
+.star-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        var(--color-gold) 0%,
+        rgba(255, 215, 0, 0.5) 30%,
+        transparent 70%
+    );
+    opacity: 0.5;
+    z-index: -1;
+    animation: starGlowPulse 2.5s ease-in-out infinite;
+    filter: blur(10px);
+}
+
+/* Sparkles de la estrella */
+.star-sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 6px white);
+    animation: sparkleTwinkle 1.5s ease-in-out infinite;
+}
+
+.star-sparkle:nth-child(1) { top: 10%; left: 30%; animation-delay: 0s; }
+.star-sparkle:nth-child(2) { top: 20%; right: 25%; animation-delay: 0.3s; }
+.star-sparkle:nth-child(3) { bottom: 15%; left: 20%; animation-delay: 0.6s; }
+.star-sparkle:nth-child(4) { bottom: 25%; right: 15%; animation-delay: 0.9s; }

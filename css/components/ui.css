@@ -1,0 +1,229 @@
+/* ===== INTERFAZ DE USUARIO ===== */
+
+/* Contenedor principal de UI */
+#ui {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+    padding: 30px;
+    background: radial-gradient(circle at top center, 
+        rgba(26, 26, 46, 0.2) 0%,
+        transparent 70%);
+}
+
+/* Título principal */
+.title-container {
+    text-align: center;
+    margin-top: 20px;
+    pointer-events: none;
+    position: relative;
+}
+
+.main-title {
+    font-family: var(--font-title);
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, 
+        var(--color-gold) 0%,
+        var(--color-red) 25%,
+        var(--color-green) 50%,
+        var(--color-blue) 75%,
+        var(--color-gold) 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: 
+        titleGradient 8s ease infinite,
+        titleGlow 3s ease-in-out infinite alternate;
+    position: relative;
+}
+
+/* Decoraciones del título */
+.title-decoration {
+    position: absolute;
+    font-size: 2rem;
+    color: var(--color-gold);
+    opacity: 0.7;
+    animation: decorationFloat 6s ease-in-out infinite;
+}
+
+.title-decoration.left {
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title-decoration.right {
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--color-silver);
+    font-weight: 300;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--color-gold),
+        transparent);
+}
+
+/* Panel de instrucciones */
+.instructions-panel {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background: rgba(26, 26, 46, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--color-gold);
+    border-radius: 16px;
+    padding: 30px;
+    width: 300px;
+    pointer-events: auto;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 0 20px rgba(255, 215, 0, 0.1);
+    transition: all var(--transition);
+}
+
+.instructions-panel:hover {
+    transform: translateY(-50%) scale(1.02);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.5),
+        inset 0 0 25px rgba(255, 215, 0, 0.15);
+}
+
+.instructions-panel h3 {
+    color: var(--color-gold);
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-title);
+}
+
+.instructions-panel h3 i {
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+.instructions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.instructions-content p {
+    color: var(--color-text-dim);
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    line-height: 1.5;
+    transition: all var(--transition-fast);
+}
+
+.instructions-content p:hover {
+    color: var(--color-text);
+    transform: translateX(5px);
+}
+
+.instructions-content i {
+    color: var(--color-gold);
+    width: 24px;
+    text-align: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Contenedor principal de la escena */
+#scene-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(180deg, 
+        var(--color-gradient-1) 0%,
+        var(--color-gradient-2) 40%,
+        var(--color-gradient-3) 100%);
+    overflow: hidden;
+}
+
+/* Efecto de brillo sutil en el fondo */
+#scene-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(51, 255, 153, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(51, 153, 255, 0.02) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Canvas para luces */
+#lights-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Partículas de nieve */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.snowflake {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}

@@ -1,0 +1,622 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Pantallas grandes (≥1200px) */
+@media (min-width: 1200px) {
+    .card-content {
+        max-width: 1100px;
+        height: 75%;
+    }
+    
+    .kuro-amy-photo {
+        width: 400px !important;
+        height: 225px !important;
+    }
+}
+
+/* Tablets y pantallas medianas (≤1200px) */
+@media (max-width: 1200px) {
+    .main-title {
+        font-size: 3.5rem;
+    }
+    
+    .instructions-panel {
+        right: 20px;
+        width: 280px;
+    }
+    
+    .card-content {
+        width: 95%;
+        height: 80%;
+    }
+    
+    .kuro-amy-photo {
+        width: 350px !important;
+        height: 197px !important;
+        bottom: 80px !important;
+    }
+    
+    #special-star {
+        width: 90px;
+        height: 90px;
+        top: 10%;
+    }
+    
+    .dog-content {
+        max-width: 95%;
+        height: 90%;
+    }
+    
+    .dog-image-side {
+        flex: 0 0 350px;
+    }
+    
+    .dog-title {
+        font-size: 2.2rem;
+    }
+    
+    .poem-stanza {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablets (≤992px) */
+@media (max-width: 992px) {
+    .main-title {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+    
+    .instructions-panel {
+        position: static;
+        transform: none;
+        width: 90%;
+        max-width: 400px;
+        margin: 30px auto;
+        top: auto;
+        right: auto;
+    }
+    
+    .photo-frame {
+        width: 150px;
+        height: 200px;
+    }
+    
+    #special-star {
+        width: 80px;
+        height: 80px;
+        top: 8%;
+    }
+    
+    .card-content {
+        flex-direction: column;
+        height: 85%;
+        overflow-y: auto;
+        max-width: 700px;
+    }
+    
+    .card-image-container {
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        flex: 0 0 auto;
+        height: 45%;
+        padding: 30px;
+    }
+    
+    .card-text-container {
+        flex: 1;
+        padding: 40px 30px;
+    }
+    
+    .kuro-amy-photo {
+        width: 320px !important;
+        height: 180px !important;
+        bottom: 70px !important;
+    }
+    
+    .dog-content {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px;
+        max-width: 700px;
+    }
+    
+    .dog-layout {
+        flex-direction: column;
+        height: auto;
+        max-height: 90vh;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes (≤768px) */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 4px;
+    }
+    
+    .instructions-panel {
+        padding: 25px;
+    }
+    
+    .photo-frame {
+        width: 130px;
+        height: 180px;
+    }
+    
+    #special-star {
+        width: 70px;
+        height: 70px;
+        top: 7%;
+    }
+    
+    .title-decoration {
+        display: none;
+    }
+    
+    .card-content {
+        height: 90%;
+        padding: 0;
+        border-radius: 20px;
+    }
+    
+    .card-image-container {
+        padding: 25px;
+        height: 40%;
+    }
+    
+    .card-text-container {
+        padding: 30px 25px;
+    }
+    
+    #card-title {
+        font-size: 2.2rem;
+        padding: 15px 10px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+    
+    #card-artist {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .card-message {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+    
+    #card-message-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    .gift-button {
+        min-width: 320px;
+        padding: 18px 35px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+    }
+    
+    .card-footer {
+        padding: 20px 15px;
+        min-height: 60px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-text {
+        font-size: 1.1rem;
+        padding: 8px;
+    }
+    
+    .kuro-amy-photo {
+        width: 280px !important;
+        height: 157px !important;
+        bottom: 60px !important;
+    }
+    
+    .dog-image-side {
+        flex: 0 0 auto;
+        height: 300px;
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .dog-image {
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+    }
+    
+    .dog-text-side {
+        flex: 1;
+        padding: 30px;
+        overflow-y: auto;
+        max-height: 60vh;
+    }
+    
+    .dog-title {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .dog-message-scroll {
+        max-height: none;
+    }
+}
+
+/* Móviles medianos (≤576px) */
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    
+    .instructions-panel {
+        padding: 20px;
+        width: 95%;
+        max-width: 350px;
+    }
+    
+    .instructions-content p {
+        font-size: 0.95rem;
+        gap: 12px;
+    }
+    
+    .photo-frame {
+        width: 110px;
+        height: 160px;
+    }
+    
+    .normal-photo {
+        width: 100px !important;
+        height: 150px !important;
+    }
+    
+    #special-star {
+        width: 60px;
+        height: 60px;
+        top: 6%;
+    }
+    
+    .card-content {
+        height: 95%;
+        border-radius: 18px;
+        width: 98%;
+    }
+    
+    .card-image-container {
+        padding: 20px;
+        height: 35%;
+    }
+    
+    .card-text-container {
+        padding: 25px 20px;
+    }
+    
+    #card-title {
+        font-size: 1.8rem;
+        padding: 12px 8px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+    
+    #card-artist {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+    
+    .card-message {
+        padding: 20px;
+        margin-bottom: 25px;
+        border-left-width: 3px;
+    }
+    
+    #card-message-text {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+    .gift-button {
+        min-width: 280px;
+        padding: 16px 30px;
+        font-size: 1.1rem;
+        width: 90%;
+    }
+    
+    .card-footer {
+        padding: 15px 10px;
+        min-height: 55px;
+    }
+    
+    .footer-text {
+        font-size: 1rem;
+    }
+    
+    .kuro-amy-photo {
+        width: 250px !important;
+        height: 140px !important;
+        bottom: 50px !important;
+    }
+    
+    .dog-content {
+        padding: 30px;
+        width: 98%;
+    }
+    
+    .dog-image-side {
+        height: 250px;
+    }
+    
+    .dog-text-side {
+        padding: 20px;
+    }
+    
+    .dog-title {
+        font-size: 1.8rem;
+    }
+    
+    .dog-subtitle {
+        font-size: 1rem;
+    }
+    
+    .poem-stanza {
+        font-size: 1.2rem;
+        line-height: 1.9;
+    }
+    
+    .dedication-text {
+        font-size: 1.1rem;
+    }
+    
+    .paw-line {
+        gap: 25px;
+    }
+    
+    .paw {
+        font-size: 28px;
+    }
+}
+
+/* Móviles pequeños (≤480px) */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+    
+    .instructions-panel h3 {
+        font-size: 1.1rem;
+    }
+    
+    .photo-frame {
+        width: 90px;
+        height: 140px;
+    }
+    
+    .normal-photo {
+        width: 85px !important;
+        height: 130px !important;
+    }
+    
+    #special-star {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .card-content {
+        border-radius: 15px;
+    }
+    
+    .card-image-container {
+        padding: 15px;
+    }
+    
+    .card-text-container {
+        padding: 20px 15px;
+    }
+    
+    #card-title {
+        font-size: 1.6rem;
+        padding: 10px 6px;
+        line-height: 1.25;
+    }
+    
+    #card-artist {
+        font-size: 1rem;
+    }
+    
+    .card-message {
+        padding: 15px;
+    }
+    
+    #card-message-text {
+        font-size: 0.95rem;
+    }
+    
+    .gift-button {
+        min-width: 250px;
+        padding: 14px 25px;
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .gift-button i {
+        font-size: 1rem;
+    }
+    
+    .kuro-amy-photo {
+        width: 220px !important;
+        height: 124px !important;
+        bottom: 40px !important;
+    }
+    
+    .dog-image-side {
+        height: 200px;
+    }
+    
+    .dog-title {
+        font-size: 1.6rem;
+    }
+    
+    .poem-stanza {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+}
+
+/* Móviles muy pequeños (≤380px) */
+@media (max-width: 380px) {
+    .main-title {
+        font-size: 1.6rem;
+    }
+    
+    .subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .photo-frame {
+        width: 80px;
+        height: 130px;
+    }
+    
+    .normal-photo {
+        width: 75px !important;
+        height: 120px !important;
+    }
+    
+    #card-title {
+        font-size: 1.5rem;
+        padding: 8px 5px;
+        line-height: 1.2;
+    }
+    
+    .gift-button {
+        min-width: 220px;
+        padding: 12px 20px;
+    }
+    
+    .kuro-amy-photo {
+        width: 200px !important;
+        height: 112px !important;
+        bottom: 30px !important;
+    }
+    
+    .dog-title {
+        font-size: 1.5rem;
+    }
+    
+    .poem-stanza {
+        font-size: 1rem;
+    }
+}
+
+/* Altura específica para pantallas muy altas */
+@media (min-height: 900px) {
+    .card-content {
+        height: 70%;
+        max-height: 800px;
+    }
+    
+    .card-message {
+        max-height: 350px;
+    }
+}
+
+/* Orientación horizontal en móviles */
+@media (max-height: 600px) and (orientation: landscape) {
+    .card-content {
+        height: 95%;
+        max-height: 95vh;
+    }
+    
+    .card-image-container {
+        height: 50%;
+        padding: 15px;
+    }
+    
+    .card-text-container {
+        padding: 20px;
+    }
+    
+    #card-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .card-message {
+        padding: 15px;
+        margin-bottom: 15px;
+        max-height: 150px;
+    }
+    
+    .instructions-panel {
+        top: 20px;
+        transform: none;
+        width: 250px;
+        padding: 15px;
+    }
+    
+    .title-container {
+        margin-top: 10px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+/* Soporte para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #ffffff;
+        --color-text-dim: #cccccc;
+    }
+}
+
+/* Soporte para alta densidad de píxeles */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .card-content {
+        border-width: 2px;
+    }
+    
+    .photo-frame {
+        filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.4));
+    }
+}
+
+/* Impresión */
+@media print {
+    .card-overlay,
+    .instructions-panel,
+    #special-star,
+    .snowflakes {
+        display: none !important;
+    }
+    
+    .card-content {
+        box-shadow: none;
+        border: 2px solid #000;
+        break-inside: avoid;
+    }
+}

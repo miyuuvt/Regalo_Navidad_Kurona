@@ -1,0 +1,52 @@
+/* ===== VARIABLES GLOBALES ===== */
+:root {
+    /* Colores Dark Navideño Mejorados */
+    --color-bg: #0a0a0f;
+    --color-dark: #1a1a2e;
+    --color-darker: #0f0f1a;
+    --color-gradient-1: #0f0f1a;
+    --color-gradient-2: #1a1a2e;
+    --color-gradient-3: #0a0a0f;
+    
+    /* Luces navideñas - Colores más vibrantes */
+    --color-gold: #ffd700;
+    --color-gold-light: #fff8dc;
+    --color-red: #ff3366;
+    --color-green: #33ff99;
+    --color-blue: #3399ff;
+    --color-white: #ffffff;
+    --color-silver: #c0c0c0;
+    --color-purple: #cc33ff;
+    --color-orange: #ff9900;
+    
+    /* Gradientes para efectos */
+    --gradient-gold: linear-gradient(135deg, #ffd700, #ffed4e);
+    --gradient-red: linear-gradient(135deg, #ff3366, #ff6699);
+    --gradient-green: linear-gradient(135deg, #33ff99, #66ffcc);
+    --gradient-blue: linear-gradient(135deg, #3399ff, #66ccff);
+    
+    /* Tema Kuron */
+    --color-kuron: #8a2be2;
+    --color-kuron-light: #9d4edd;
+    
+    /* Textos */
+    --color-text: #ffffff;
+    --color-text-dim: #cccccc;
+    --color-text-gold: #ffd700;
+    
+    /* Fuentes */
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-handwriting: 'Dancing Script', cursive;
+    
+    /* Transiciones */
+    --transition: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-fast: 0.15s ease;
+    
+    /* Sombras */
+    --shadow-light: 0 0 20px rgba(255, 215, 0, 0.3);
+    --shadow-medium: 0 0 40px rgba(255, 215, 0, 0.5);
+    --shadow-strong: 0 0 60px rgba(255, 215, 0, 0.7);
+    --shadow-glow: 0 0 30px currentColor;
+}
